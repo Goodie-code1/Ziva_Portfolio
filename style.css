@@ -258,3 +258,41 @@ h2 {
     margin-top: 10px;
     cursor: pointer;
 }
+/* 1. Make the Nav container taller and more spacious */
+.nav {
+    padding: 2rem 8%; /* Increased vertical padding to make it 'bigger' */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(25px);
+    background: rgba(11, 15, 26, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* 2. Make the Logo and Links larger and easier to see */
+.logo {
+    font-size: 1.8rem; /* Made the logo bigger */
+    color: var(--accent);
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px; /* Increased space between links so they don't look crowded */
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.1rem; /* Increased font size for better readability */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent); /* Adds a subtle color change on hover */
+}
