@@ -25,7 +25,7 @@
             ZIVA.
         </div>
 
-        <div class="nav-links">
+        <div class="nav-links" id="nav-links">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#personal">Personal</a>
@@ -35,11 +35,11 @@
             <a href="#contact">Contact</a>
         </div>
 
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 
     </nav>
 
@@ -401,6 +401,13 @@
 
 <script src="script.js"></script>
 
+<script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
 
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
