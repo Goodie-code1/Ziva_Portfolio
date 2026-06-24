@@ -402,12 +402,21 @@
 <script src="script.js"></script>
 
 <script>
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    const links = document.querySelectorAll('.nav-links a'); // Select all links
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+    // 1. Toggle menu when hamburger is clicked
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // 2. Close menu when any link is clicked
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
         });
-    </script>
+    });
+</script>
 </body>
 </html>
